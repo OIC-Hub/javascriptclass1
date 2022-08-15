@@ -9,34 +9,25 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- <h1 id="reg">Registration Form</h1>
-    <form class="row">
-      <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">First name</label>
-        <input type="text" class="form-control" id="firstName" value="Mark" >
-      </div>
-      <div class="col-md-4">
-        <label for="validationCustom02" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="lastName" value="Otto" >
-      
-      </div>
-      <div class="col-md-4">
-        <label for="validationCustomUsername" class="form-label">Username</label>
-        <div class="input-group">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input type="text" class="form-control" id="userName" value="SundayOmolewu">
-        </div>
-      </div>
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
-      </div>
-    </form> -->
-<input type="text" id="value">
-<button onclick="document.getElementById('value').value +='1'" >1</button>
-<butston onclick="document.getElementById('value').value +='2'" >2</button>
-<button>3</button>
-
-
+  <div style="margin:auto; max-width: 500px;margin-top: 2%;">
+<form name="form1" class="form1">
+<p>
+  name: <br/> 
+  <input type="text" name="name" id="name" onchange="getNameValue()">
+  <br>
+   <small id="nameErr"></small>
+</p>
+<p>
+  Title: <br />
+  <input type="text" name="title" id="tile">
+</p>
+<p>
+  Upload: <br />
+  <input type="file" name="upload" id="upload">
+</p>
+<input type="submit" value="Submit Data">
+</form>
+</div>
 <script src="form.js"></script>
 </body>
 </html>
