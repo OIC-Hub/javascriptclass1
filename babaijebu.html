@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>BABA IJEBU LOTTO</title>
+</head>
+<body>
+    <div style="margin:auto; width:500px;margin-top: 3%;">
+        <p>
+            Enter your predicted numbers. Only two sure(Two Numbers) and three direct(Three Numbers) available
+            <br>
+            <form>
+            <input type="text" placeholder="example at 89, 78,34" name="predict">
+            <input type="submit" value="Predict">
+</form>
+
+        </p>
+
+    </div>
+    <script>
+ let form1= document.forms[0];
+  form1.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let predictednumbers = form1['predict'].value;
+   const newpredict=  predictednumbers.split(",")
+   console.log(newpredict)
+    const randNums=[];
+   for(let i=0; i<6; i++){
+  let randNum= Math.floor(Math.random() *100)
+    randNums[i] = randNum
+  }
+  console.log(randNums)
+if(newpredict.length == 2 || newpredict.length == 3){
+    const correctscore =[];
+    let sn=0
+    for(let i =0; i < newpredict.length; i++){
+
+    if(randNums.includes(parseInt(newpredict[i]))){
+      correctscore[sn] = newpredict[i];
+      sn++
+    }
+    }
+    console.log(correctscore)
+if(newpredict.length ==2 && correctscore.length == 2){
+    alert('You win')
+}else if(newpredict.length == 3 && correctscore.length == 3){
+   alert('You win')
+}else{
+    alert('O lule');
+}
+}
+else{
+    alert('Invalid Numbers');
+}
+
+  });
+    </script>
+</body>
+</html>
