@@ -16,6 +16,8 @@
 </div>
 
 <img src="images/d1.png" width="200" height="200" id="img">
+<br>
+<button id="play" onclick="playGame()">Play</button>
 
   <div style="margin:auto; max-width: 500px;margin-top: 2%;">
     <div id="errors"></div>
@@ -41,6 +43,17 @@
 <input type="submit" value="Submit Data">
 </form>
 </div>
+<script>
+  function playGame(){
+  // document.getElementById('play')
+  let  rand = Math.floor(Math.random()*7)
+     if(rand == 0){
+      rand =1
+     }
+     console.log(rand)
+  document.getElementById('img').src = "images/d"+ rand +".png";
+  }
+</script>
 <script src="form.js"></script>
 </body>
 </html>
