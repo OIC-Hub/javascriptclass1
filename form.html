@@ -9,21 +9,34 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="user">
+  <h2>Users Details</h2>
+  <p>Name: <span id="username"></span></p>
+  <p>Title: <span id="usertitle"></span></p>
+</div>
+
+<img src="images/d1.png" width="200" height="200" id="img">
+
   <div style="margin:auto; max-width: 500px;margin-top: 2%;">
+    <div id="errors"></div>
 <form name="form1" class="form1">
 <p>
   name: <br/> 
-  <input type="text" name="name" id="name" onchange="getNameValue()">
+  <input type="text" name="name" id="name">
   <br>
    <small id="nameErr"></small>
 </p>
 <p>
   Title: <br />
   <input type="text" name="title" id="tile">
+  <br>
+  <small id="titleErr"></small>
 </p>
 <p>
   Upload: <br />
-  <input type="file" name="upload" id="upload">
+  <input type="file" name="upload" id="upload" onchange="getfilesDetails()">
+  <br/>
+  <div id="imageinfo"></div>
 </p>
 <input type="submit" value="Submit Data">
 </form>
