@@ -19,7 +19,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
         <th>Address</th>
         </tr>
         `;
-
         for (let i = 0; i < data.length; i++) {
             table += `<tr>
             <td> ${data[i].id} </td>
