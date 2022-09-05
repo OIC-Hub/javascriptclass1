@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript time</title>
+</head>
+<body>
+    <div id="time"></div>
+    <div id="date"></div>
+
+
+
+
+
+    <script>
+        var months =['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'];
+var oldDate =new Date();
+ 
+  let month = months[oldDate.getMonth()];
+  let day =  oldDate.getDay();
+  let date  = oldDate.getDate();
+  let hours = oldDate.getHours();
+  let minutes =oldDate.getMinutes();
+    let sec = oldDate.getSeconds();
+    // oldDate.setFullYear('2000');
+    let year = oldDate.getFullYear()
+
+    document.getElementById('date').innerHTML=`Today is: ${year} ${month} ${date}`;
+//  let month = '';
+//  for(let i =0; months.length; i++){
+//     if(oldDate.getMonth == i){
+//     month = months[i]
+//     }
+//  }
+console.log(year);
+// let newDate = new Date();
+// if(oldDate > newDate){
+//     console.log('This is a past  event')
+// }else{
+//      console.log('Welcome to our today\'s event');
+// }
+console.log(oldDate.toISOString());
+
+//   setTimeout(()=>{
+//     alert('Javascript is fun to learn')
+//   }, 3000)
+ setInterval(function(){
+     let newD = new Date();
+  document.getElementById('time').innerHTML= newD.toLocaleTimeString();    //newD.toLocaleString();
+ }, 1000)
+    </script>
+</body>
+</html>
